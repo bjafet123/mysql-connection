@@ -3,7 +3,9 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const {readPool} = require('./lib/query')
+const {readPool} = require('./../lib/query')
+
+const PORT = process.env.PORT || 5000;
 
 app.use(express.json());
 
@@ -57,7 +59,7 @@ app.post("/", async (req, res) => {
 	}
 });
 
-app.listen(3000, () => {
+app.listen(PORT, () => {
 	console.log("Server running on port 3000...");
 });
 
