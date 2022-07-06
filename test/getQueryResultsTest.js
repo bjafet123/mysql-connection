@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
-const {readPool} = require('./../lib/query')
+const {readPool} = require('./../helpers/query')
 
 const PORT = process.env.PORT || 5000;
 
