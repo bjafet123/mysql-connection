@@ -1,3 +1,4 @@
+require('dotenv').config();
 const amqp = require('amqplib');
 const log = require('./logger');
 
@@ -5,10 +6,9 @@ module.exports.producerMessage = async (message) => {
 
     try{
         const exchangeDLX = 'exchangeDLX';
-        // const routingKeyDLX = 'routingKeyDLX';
         const queueDLX = 'queueDLX';
 
-        let connection = await amqp.connect('amqp://guest:guest@rabbitmq-service.oih-dev-ns.svc.cluster.local:5672');
+        let connection = await amqp.connect(process.env.URI_RABBITMQ);
 
         const ch = await connection.createChannel();
 
@@ -26,7 +26,4 @@ module.exports.producerMessage = async (message) => {
     }catch (e){
         log.error(`ERROR on rabbit: ${e}`);
     }
-
-
-
 };
