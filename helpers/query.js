@@ -1,4 +1,3 @@
-const mysql = require('mysql');
 const log = require('./logger');
 
 async function readPool(pool, query) {
@@ -15,4 +14,4 @@ async function readPool(pool, query) {
     });
 }
 
-module.exports = {readPool}
+module.exports = {readPool};

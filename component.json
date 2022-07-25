@@ -1,20 +1,20 @@
 {
-	"title": "OIH MySQL Connector",
-	"description": "OIH connector for MySQL queries",
-	"version": "0.0.1",
-	"docsUrl": "https://github.com/bjafet123/mysql-connection/blob/main/README.md",
-	"buildType": "docker",
-	"credentials": {},
-	"triggers": {
-		"getQueryResults": {
-			"title": "Execute query through a MySQL connection.",
-			"main": "./lib/triggers/getQueryResults.js"
-		}
-	},
-	"actions": {
-		"testAction": {
-			"title": "Execute CRUD query through a MySQL connection.",
-			"main": "./lib/actions/testAction.js"
-		}
-	}
+  "title": "OIH MySQL Connector",
+  "description": "OIH connector for MySQL queries",
+  "version": "0.0.1",
+  "docsUrl": "https://github.com/bjafet123/mysql-connection/blob/main/README.md",
+  "buildType": "docker",
+  "credentials": {},
+  "triggers": {
+    "getQueryResults": {
+      "title": "Execute query through a MySQL connection.",
+      "main": "./lib/triggers/getQueryResults.js"
+    }
+  },
+  "actions": {
+    "testAction": {
+      "title": "Execute CRUD query through a MySQL connection.",
+      "main": "./lib/actions/testAction.js"
+    }
+  }
 }

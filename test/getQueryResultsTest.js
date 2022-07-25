@@ -20,10 +20,10 @@ app.post('/', async (req, res) => {
         let properties = {
             database: null,
             host: null,
-            port: null,
-            user: null,
             password: null,
-            query: null
+            port: null,
+            query: null,
+            user: null
         };
 
         if (!data) {
